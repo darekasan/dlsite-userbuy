@@ -1,4 +1,4 @@
-var dlurl = "https://www.dlsite.com/maniax/mypage/userbuy/=/type/12/start/all/sort/1/order/1/page/";
+var dlurl = "https://www.dlsite.com/maniax/mypage/userbuy/=/type/all/start/all/sort/1/order/1/page/";
 var lastPage = 1;
 var result = new Object();
 result.count = 0;
