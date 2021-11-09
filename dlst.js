@@ -12,7 +12,10 @@ for(var i=1;i<=lastPage;i++){
     var doc = new DOMParser().parseFromString(fetchUrl(dlurl+i),"text/html");
     if(i==1){
         console.log(`取得中 ${i}ページ目`);
-        lastPage = parseInt(doc.querySelector(".page_no ul li:last-child a").dataset.value);
+        var lastPageElm = doc.querySelector(".page_no ul li:last-child a");
+        if(lastPageElm){
+        lastPage = parseInt(lastPageElm.dataset.value);
+        }
     }else{
         console.log(`取得中 ${i}/${lastPage}ページ目`);
     }
